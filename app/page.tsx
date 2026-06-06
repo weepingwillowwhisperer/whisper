@@ -145,39 +145,65 @@ export default function WillowPdfStore() {
         
         <FeaturedSection onAddToCart={addToCart} />
 
-        {/* Whisper Spotlight */}
+        {/* Whisper — Separate Unit */}
         <section className="mx-auto max-w-7xl px-6 py-20 md:py-24">
-          <div className="rounded-[2rem] border border-willow-300/20 bg-gradient-to-br from-willow-300/5 to-stone-900 p-8 md:p-12">
-            <div className="grid gap-12 lg:grid-cols-2">
+          <div className="mb-12">
+            <p className="flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-stone-400">
+              <span
+                aria-hidden
+                className="inline-block h-px w-8 bg-stone-600"
+              />
+              A separate unit
+            </p>
+            <h2 className="mt-4 text-3xl font-light tracking-tight md:text-4xl">
+              Whisper.
+            </h2>
+            <p className="mt-4 max-w-2xl text-base text-stone-400">
+              Beyond the five pillars, a complete language system.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] border border-stone-700/50 bg-gradient-to-br from-stone-900/50 to-stone-950 p-8 md:p-12">
+            <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
               <div>
-                <p className="flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-willow-300/90">
-                  <span
-                    aria-hidden
-                    className="inline-block h-px w-8 bg-willow-300/70"
-                  />
-                  New
-                </p>
-                <h2 className="mt-4 text-3xl font-light tracking-tight md:text-4xl">
-                  Whisper: A language system for people who live quietly.
-                </h2>
-              </div>
-              <div className="space-y-6 text-stone-300">
-                <p>
+                <h3 className="text-2xl font-light">
+                  A language system for people who live quietly.
+                </h3>
+                <p className="mt-6 leading-8 text-stone-400">
                   Depression is hidden by inaccurate language. Whisper is a
-                  system of cards, guides, and protocols that let people say
-                  what is barely visible — and teach those around them to read
-                  it.
+                  complete system of cards, guides, and protocols that let
+                  people say what is barely visible — and teach those around
+                  them to read it.
                 </p>
-                <p>
-                  Code cards that signal and translate. Messages that cost
-                  less to send. Agreements decided in clear moments for dark
-                  ones.
-                </p>
+              </div>
+              <div>
+                <div className="rounded-xl border border-stone-800 bg-stone-950/50 p-6 space-y-4">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-stone-500">
+                      The System Works Through
+                    </p>
+                    <ul className="mt-4 space-y-3 text-sm text-stone-300">
+                      <li className="flex items-start gap-3">
+                        <span className="text-willow-300 mt-1">·</span>
+                        <span><span className="font-medium">Signal</span> — say something without saying everything</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-willow-300 mt-1">·</span>
+                        <span><span className="font-medium">Translate</span> — teach others to read what's barely visible</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-willow-300 mt-1">·</span>
+                        <span><span className="font-medium">Reduce Cost</span> — lower the price of communication</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
                 <a
                   href="/whisper"
-                  className="inline-block rounded-full bg-willow-300 px-6 py-3 text-sm font-medium text-stone-950 transition-transform hover:-translate-y-0.5"
+                  className="mt-6 inline-block rounded-full bg-willow-300 px-6 py-3 text-sm font-medium text-stone-950 transition-transform hover:-translate-y-0.5"
                 >
-                  Explore Whisper
+                  Enter Whisper
                 </a>
               </div>
             </div>

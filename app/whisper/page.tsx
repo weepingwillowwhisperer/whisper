@@ -69,16 +69,19 @@ export default function WhisperPage() {
         {/* Hero Section */}
         <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
           <div className="max-w-4xl">
-            <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-willow-300/90">
+            <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-stone-400">
               <span
                 aria-hidden
-                className="inline-block h-px w-8 bg-willow-300/70"
+                className="inline-block h-px w-8 bg-stone-600"
               />
-              Whisper
+              Separate Unit
             </p>
             <h1 className="text-balance text-5xl font-light leading-[1.02] tracking-tight md:text-7xl">
-              A language system for people who live quietly.
+              Whisper.
             </h1>
+            <p className="mt-4 text-base uppercase tracking-[0.2em] text-willow-300">
+              A language system for people who live quietly.
+            </p>
             <p className="mt-8 max-w-2xl text-base leading-8 text-stone-300 md:text-lg">
               Depression is hidden by inaccurate language. Every product in
               Whisper exists to reduce the burden of explanation — to let a

@@ -80,6 +80,9 @@ export const FeaturedSection: React.FC<FeaturedSectionProps> = ({
             Five pillars, one coherent storefront.
           </h3>
           <div className="mt-6 space-y-5 text-sm leading-7 text-stone-300">
+            <p className="pb-4 border-b border-stone-800">
+              <span className="text-sm font-medium text-stone-400">Willow — Five Pillars</span>
+            </p>
             <p>
               <span className="text-willow-100">Nest</span> — resources for
               the home, daily rhythm, and soft restoration.
@@ -99,6 +102,9 @@ export const FeaturedSection: React.FC<FeaturedSectionProps> = ({
             <p>
               <span className="text-willow-100">Studio</span> — brand,
               language, and creative direction.
+            </p>
+            <p className="pt-4 border-t border-stone-800 mt-4">
+              <span className="text-sm font-medium text-stone-400">Separate Unit</span>
             </p>
             <p>
               <span className="text-willow-100">Whisper</span> — a language

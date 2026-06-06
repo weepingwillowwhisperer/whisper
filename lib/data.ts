@@ -1,9 +1,11 @@
-export type Pillar = "Nest" | "Academy" | "Workshop" | "Wayfinder" | "Studio" | "Whisper";
+export type Pillar = "Nest" | "Academy" | "Workshop" | "Wayfinder" | "Studio";
+export type Unit = Pillar | "Whisper";
 
 export type Product = {
   id: string;
   title: string;
-  pillar: Pillar;
+  pillar?: Pillar;
+  unit?: Unit;
   price: number;
   format: string;
   pages: number;
@@ -52,16 +54,17 @@ export const pillars: {
       "Editorial tools, writing packs, and strategic PDFs for shaping a body of work with emotional precision and a recognizable voice.",
     items: ["Brand Guides", "Writing Packs", "Strategy PDFs"],
   },
-  {
-    name: "Whisper",
-    tagline: "For depression, communication, and quiet clarity",
-    description:
-      "A language system for people who live quietly and those who love them. Cards, guides, and protocols that reduce the cost of explaining what is barely visible.",
-    items: ["Code Cards", "Signal Protocols", "Digital Guides"],
-  },
 ];
 
-export const products: Product[] = [
+export const whisper = {
+  name: "Whisper" as const,
+  tagline: "For depression, communication, and quiet clarity",
+  description:
+    "A language system for people who live quietly and those who love them. Cards, guides, and protocols that reduce the cost of explaining what is barely visible.",
+  items: ["Code Cards", "Signal Protocols", "Digital Guides"],
+};
+
+export const willowProducts: Product[] = [
   {
     id: "nest-edit",
     title: "The Nest Edit",
@@ -150,10 +153,13 @@ export const products: Product[] = [
     description:
       "A gentle framework for navigating choices when energy and certainty are both limited.",
   },
+];
+
+export const whisperProducts: Product[] = [
   {
     id: "whisper-code-cards",
     title: "The Code Cards",
-    pillar: "Whisper",
+    unit: "Whisper",
     price: 45,
     format: "Card Set Bundle",
     pages: 0,
@@ -164,7 +170,7 @@ export const products: Product[] = [
   {
     id: "whisper-messages",
     title: "Messages That Cost Less",
-    pillar: "Whisper",
+    unit: "Whisper",
     price: 18,
     format: "Digital Guide",
     pages: 12,
@@ -175,7 +181,7 @@ export const products: Product[] = [
   {
     id: "whisper-agreement",
     title: "The Agreement",
-    pillar: "Whisper",
+    unit: "Whisper",
     price: 15,
     format: "Fillable PDF",
     pages: 2,
@@ -186,7 +192,7 @@ export const products: Product[] = [
   {
     id: "whisper-wallet-card",
     title: "Whisper Wallet Card",
-    pillar: "Whisper",
+    unit: "Whisper",
     price: 8,
     format: "Physical Card",
     pages: 0,
@@ -197,7 +203,7 @@ export const products: Product[] = [
   {
     id: "whisper-guide-reading",
     title: "How to Read a Quiet Person",
-    pillar: "Whisper",
+    unit: "Whisper",
     price: 22,
     format: "PDF Guide",
     pages: 38,
@@ -208,7 +214,7 @@ export const products: Product[] = [
   {
     id: "whisper-guide-cost",
     title: "The Cost of Explaining",
-    pillar: "Whisper",
+    unit: "Whisper",
     price: 20,
     format: "PDF Guide",
     pages: 32,
@@ -218,7 +224,9 @@ export const products: Product[] = [
   },
 ];
 
-export const featured: Product[] = [
+export const products = [...willowProducts];
+
+export const willowFeatured: Product[] = [
   {
     id: "nest-reset",
     title: "Nest Reset",
@@ -249,10 +257,13 @@ export const featured: Product[] = [
     description:
       "Messaging prompts, language structures, and tone-setting tools for thoughtful brands.",
   },
+];
+
+export const whisperFeatured: Product[] = [
   {
     id: "whisper-code-cards",
     title: "The Code Cards",
-    pillar: "Whisper",
+    unit: "Whisper",
     price: 45,
     format: "Card Set Bundle",
     pages: 0,
@@ -260,6 +271,8 @@ export const featured: Product[] = [
       "Two decks: signals for the person, readings for those who love them. Bone paper, Willow Green ink, Cormorant Garamond.",
   },
 ];
+
+export const featured = [...willowFeatured];
 
 export const collectionFilters = [
   "All PDFs",
@@ -269,4 +282,4 @@ export const collectionFilters = [
   "Templates",
 ] as const;
 
-export const allProducts = [...featured, ...products];
+export const allProducts = [...willowFeatured, ...willowProducts, ...whisperFeatured, ...whisperProducts];

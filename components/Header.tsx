@@ -26,7 +26,7 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onCartClick }) => {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 text-sm text-stone-300 md:flex">
+        <nav className="hidden items-center gap-6 text-sm text-stone-300 md:flex">
           <a href="#pillars" className="transition-colors hover:text-white">
             Pillars
           </a>
@@ -39,6 +39,13 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onCartClick }) => {
           <a href="#about" className="transition-colors hover:text-white">
             About
           </a>
+
+          <div className="h-4 w-px bg-stone-700" />
+
+          <a href="/whisper" className="font-light text-willow-300/90 transition-colors hover:text-willow-100">
+            Whisper
+          </a>
+
           <button
             onClick={onCartClick}
             className="group relative inline-flex items-center gap-2 rounded-full border border-stone-700 px-4 py-2 transition-colors hover:bg-stone-900"

@@ -35,7 +35,11 @@ export default function ProductPage() {
   }, 0);
 
   const relatedProducts = product
-    ? allProducts.filter((p) => p.pillar === product.pillar && p.id !== product.id)
+    ? allProducts.filter((p) => {
+        const productUnit = product.unit || product.pillar;
+        const pUnit = p.unit || p.pillar;
+        return pUnit === productUnit && p.id !== product.id;
+      })
     : [];
 
   const cartItems = Object.entries(cart)
@@ -94,7 +98,7 @@ export default function ProductPage() {
               Willow
             </Link>
             <span>/</span>
-            {product.pillar === "Whisper" ? (
+            {product.unit === "Whisper" ? (
               <>
                 <Link
                   href="/whisper"
@@ -126,7 +130,7 @@ export default function ProductPage() {
             <div className="flex flex-col justify-center">
               <div className="mb-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-willow-300/70">
-                  {product.pillar}
+                  {product.unit || product.pillar}
                 </p>
                 <h1 className="mt-4 text-4xl font-light leading-tight md:text-5xl">
                   {product.title}
@@ -183,7 +187,7 @@ export default function ProductPage() {
               immediately and re-download anytime from your receipt.
             </p>
 
-            {product.pillar === "Whisper" && (
+            {product.unit === "Whisper" && (
               <div className="mt-8 rounded-lg border border-stone-800/50 bg-stone-950/50 p-6">
                 <p className="text-sm font-medium text-willow-300">
                   Part of the Whisper system
