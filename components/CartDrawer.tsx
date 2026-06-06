@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import { loadStripe } from "@stripe/stripe-js";
 import { Product } from "../lib/data";
 
 interface CartItem extends Product {
@@ -24,6 +25,47 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
   count,
   onRemove,
 }) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleCheckout = async () => {
+    if (items.length === 0) return;
+
+    setIsLoading(true);
+    try {
+      const response = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          items: items.map((item) => ({ id: item.id, qty: item.qty })),
+        }),
+      });
+
+      const { sessionId, error } = await response.json();
+
+      if (error) {
+        alert("Error: " + error);
+        setIsLoading(false);
+        return;
+      }
+
+      const stripe = await loadStripe(
+        process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+      );
+
+      if (!stripe) {
+        alert("Failed to load payment processor");
+        setIsLoading(false);
+        return;
+      }
+
+      await stripe.redirectToCheckout({ sessionId });
+    } catch (error) {
+      console.error("Checkout error:", error);
+      alert("Failed to proceed to checkout");
+      setIsLoading(false);
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -73,7 +115,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <p className="text-[11px] uppercase tracking-[0.25em] text-willow-300/90">
-                        {item.pillar}
+                        {item.unit || item.pillar}
                       </p>
                       <p className="mt-1 text-sm text-stone-100">
                         {item.title}
@@ -112,12 +154,15 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
             Instant download · personal use license
           </p>
           <button
-            disabled={items.length === 0}
+            onClick={handleCheckout}
+            disabled={items.length === 0 || isLoading}
             className="mt-4 w-full rounded-full bg-stone-100 px-5 py-3 text-sm font-medium text-stone-950 transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0"
           >
-            {items.length === 0
-              ? "Cart is empty"
-              : "Proceed to checkout"}
+            {isLoading
+              ? "Processing..."
+              : items.length === 0
+                ? "Cart is empty"
+                : "Proceed to checkout"}
           </button>
         </div>
       </aside>
