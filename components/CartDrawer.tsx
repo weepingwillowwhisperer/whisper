@@ -49,7 +49,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
       }
 
       const stripe = await loadStripe(
-        process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+        process.env.next_public_stripe_publishable_key || ""
       );
 
       if (!stripe) {
