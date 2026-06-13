@@ -1,0 +1,11 @@
+path,file_type,score,matched_signals
+kdp_writer_pre_push_check.py,.py,6,"kdp, writer"
+.claude/worktrees/recursing-gauss-dc1519/app/page.tsx,.tsx,5,"writer, writing, book, editor, format"
+lib/data.ts,.ts,4,"writing, book, editor, format"
+.claude/worktrees/recursing-gauss-dc1519/app/layout.tsx,.tsx,3,"book, author, html"
+app/layout.tsx,.tsx,3,"book, author, html"
+app/page.tsx,.tsx,3,"writer, book, format"
+.claude/worktrees/recursing-gauss-dc1519/package.json,.json,2,deployment/config file
+QUICKSTART.md,.md,2,"editor, format"
+domain-organization-prompt.txt,.txt,2,"writing, book"
+package.json,.json,2,deployment/config file

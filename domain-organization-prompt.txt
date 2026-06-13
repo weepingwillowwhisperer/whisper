@@ -1,0 +1,47 @@
+Collect and organize everything we have been creating into the correct website/domain structure.
+
+Work only inside the current project folder.
+
+Primary goal:
+Create a clear inventory of all files, pages, copy, images, PDFs, product assets, brand materials, code, notes, drafts, and exports, then assign each item to the website domain where it belongs.
+
+Important rules:
+- Do not delete anything.
+- Do not overwrite anything without creating a backup.
+- Do not deploy, publish, change DNS, buy domains, or connect services.
+- First create a reviewable manifest before moving files.
+- Keep original filenames unless there is a clear reason to rename them.
+- If a file could belong to more than one domain, mark it as “needs review” instead of guessing.
+- Preserve brand-sensitive wording and visual assets.
+
+Domain assignment logic:
+
+1. weepingwillowwhisperer.com
+Main Willow / Weeping Willow Whisperer brand site.
+Assign founder story, about pages, homepage copy, neurodivergent support language, MS / lived-experience framing, cognitive support systems, brand philosophy, essays, lead magnets, emotional support tools, and core Willow identity assets.
+
+2. studio-domain
+Creative studio, client-facing services, branding, writing, design, strategy.
+Assign service pages, portfolio materials, client handoff documents, brand identity work, design packages, copywriting offers, consulting pages, case studies, and studio process language.
+
+3. shop-domain
+Apparel, product listings, awareness merchandise, print-on-demand assets.
+Assign apparel mockups, product descriptions, collection names, slogans, awareness campaign copy, Printify assets, Shopify or storefront copy, product photos, size guide language, and return / shipping copy.
+
+4. resources-domain
+PDFs, workbooks, guides, toolkits, paid downloads, bundles.
+Assign downloadable PDFs, workbooks, worksheets, guides, companion PDFs, product bundles, launch copy, sales page copy, opt-in resources, and Gumroad / Shopify digital product materials.
+
+5. shared-admin
+Internal files that should not be published yet.
+Assign raw notes, duplicates, unfinished drafts, strategy notes, technical config, old versions, unclear items, and anything needing human review.
+
+Tasks:
+1. Scan the entire project directory.
+2. Create /domain-organization/ with folders for each domain.
+3. Create domain-assignment-manifest.md and domain-assignment-manifest.csv.
+4. Copy files into proposed folders without deleting originals.
+5. Mark uncertain files as needs-review.
+6. Include original path, file type, inferred purpose, assigned domain, confidence level, reason, and notes.
+7. Inspect package.json, Netlify config, Next/Vite/Astro config, and deployment files if present.
+8. Report totals, duplicates, old versions, missing referenced assets, and recommended cleanup steps.

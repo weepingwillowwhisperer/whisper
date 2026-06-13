@@ -1,0 +1,6 @@
+product_slug,product_name,product_type,source_file_count,payhip_folder,etsy_folder,status
+build-summary,Build Summary,product,1,marketplace-product-organization/payhip/build-summary,marketplace-product-organization/etsy/build-summary,packet created for both Payhip and Etsy
+deployment,Deployment,product,1,marketplace-product-organization/payhip/deployment,marketplace-product-organization/etsy/deployment,packet created for both Payhip and Etsy
+domain-organization-prompt,Domain Organization Prompt,product,1,marketplace-product-organization/payhip/domain-organization-prompt,marketplace-product-organization/etsy/domain-organization-prompt,packet created for both Payhip and Etsy
+quickstart,Quickstart,product,1,marketplace-product-organization/payhip/quickstart,marketplace-product-organization/etsy/quickstart,packet created for both Payhip and Etsy
+readme,Readme,product,1,marketplace-product-organization/payhip/readme,marketplace-product-organization/etsy/readme,packet created for both Payhip and Etsy
