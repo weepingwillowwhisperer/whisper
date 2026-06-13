@@ -224,7 +224,80 @@ export const whisperProducts: Product[] = [
   },
 ];
 
-export const products = [...willowProducts];
+export const academyProducts: Product[] = [
+  {
+    id: "academy-first-five-minutes",
+    title: "The First Five Minutes Kit",
+    pillar: "Academy",
+    price: 15,
+    format: "Printable Kit",
+    pages: 10,
+    tag: "Starting Tasks",
+    description: "A task-starting kit for the moment before momentum exists: a weekly anchor page, triage card, transition scripts, and three printable focus mats.",
+  },
+  {
+    id: "academy-low-sensory-planner",
+    title: "The Low-Sensory Study Planner",
+    pillar: "Academy",
+    price: 22,
+    format: "PDF Planner",
+    pages: 40,
+    tag: "Planning",
+    description: "A weekly planner that accounts for energy, sensory load, transition cost, and recovery time — not just deadlines and empty boxes.",
+  },
+  {
+    id: "academy-thesis-momentum",
+    title: "The Thesis Momentum Map",
+    pillar: "Academy",
+    price: 28,
+    format: "PDF Map",
+    pages: 35,
+    tag: "Research",
+    description: "A non-linear thesis tracker for stall-and-surge writing patterns, with chapter weather reports, next-action lanes, and a supervisor-meeting template.",
+  },
+  {
+    id: "academy-ask-safely",
+    title: "The Ask-Safely Script Pack",
+    pillar: "Academy",
+    price: 18,
+    format: "Script PDF",
+    pages: 22,
+    tag: "Self-Advocacy",
+    description: "Ready-to-edit templates for emailing instructors, advisors, and disability services when your brain will not let you start from a blank page.",
+  },
+  {
+    id: "academy-exam-landing",
+    title: "The Exam Week Soft Landing",
+    pillar: "Academy",
+    price: 20,
+    format: "PDF Guide",
+    pages: 24,
+    tag: "Regulation",
+    description: "A nervous-system-first plan for the seven days around an exam: sleep, fuel, movement, sensory buffers, and recovery checklists.",
+  },
+  {
+    id: "academy-dense-reading",
+    title: "The Dense Reading Decoder",
+    pillar: "Academy",
+    price: 24,
+    format: "PDF Guide",
+    pages: 28,
+    tag: "Reading Method",
+    description: "A six-step method for academic reading when the same paragraph keeps vanishing. Includes a one-page annotation key and a restart protocol.",
+  },
+  {
+    id: "academy-burnout-reentry",
+    title: "The After-Burnout Re-Entry Checklist",
+    pillar: "Academy",
+    price: 18,
+    format: "PDF Checklist",
+    pages: 20,
+    tag: "Recovery",
+    description: "A gentle, staged checklist for the term after the term that broke you — with permission slips for doing the bare minimum.",
+  },
+];
+
+export const products = [...willowProducts, ...academyProducts];
 
 export const willowFeatured: Product[] = [
   {
@@ -282,4 +355,4 @@ export const collectionFilters = [
   "Templates",
 ] as const;
 
-export const allProducts = [...willowFeatured, ...willowProducts, ...whisperFeatured, ...whisperProducts];
+export const allProducts = [...willowFeatured, ...willowProducts, ...whisperFeatured, ...whisperProducts, ...academyProducts];

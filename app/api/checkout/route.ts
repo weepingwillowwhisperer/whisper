@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { allProducts } from "@/lib/data";
 
-const stripe = new Stripe(process.env.stripe_secret_key as string, {
-  apiVersion: "2024-04-10",
+const stripe = new Stripe(process.env.stripe_secret_key || "dummy_key_for_build", {
+  apiVersion: "2026-05-27.dahlia",
 });
 
 export async function POST(request: NextRequest) {

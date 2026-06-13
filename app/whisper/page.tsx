@@ -11,7 +11,7 @@ export default function WhisperPage() {
   const [cartOpen, setCartOpen] = useState(false);
 
   const whisperProducts = useMemo(
-    () => products.filter((p) => p.pillar === "Whisper"),
+    () => products.filter((p) => p.unit === "Whisper"),
     []
   );
 

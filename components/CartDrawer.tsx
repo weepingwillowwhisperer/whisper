@@ -49,7 +49,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
       }
 
       const stripe = await loadStripe(
-        process.env.stripe_publishable_key as string
+        process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
       );
 
       if (!stripe) {
@@ -58,7 +58,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
         return;
       }
 
-      await stripe.redirectToCheckout({ sessionId });
+      await (stripe as any).redirectToCheckout({ sessionId });
     } catch (error) {
       console.error("Checkout error:", error);
       alert("Failed to proceed to checkout");
