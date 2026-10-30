@@ -12,10 +12,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://wwilloww.ai";
-const siteTitle = "Willow — A quiet PDF store";
+const siteUrl = "https://willowpdf.com";
+const siteTitle = "Willow | Recognition over reinvention";
 const siteDescription =
-  "Digital PDFs for restoring the home, learning with depth, building with care, orienting through transition, and shaping a body of work. Five pillars, one quiet storefront.";
+  "Willow creates practical tools, thoughtful products, and stories for people who feel deeply and think differently.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -26,16 +26,16 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     "Willow",
-    "PDF store",
-    "digital downloads",
+    "recognition over reinvention",
+    "neurodivergent resources",
     "Nest",
     "Academy",
     "Workshop",
     "Wayfinder",
     "Studio",
     "neurodivergent",
-    "workbooks",
-    "templates",
+    "invisible disability",
+    "practical tools",
   ],
   authors: [{ name: "Willow" }],
   openGraph: {
@@ -61,9 +61,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="light"
+      data-motion="full"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }
