@@ -1,0 +1,79 @@
+/* Willow visual identity v2. GENERATED from tokens.json by scripts/build_tokens.py. Do not edit by hand. */
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400..500;1,6..72,400&family=Cormorant+Garamond:wght@300;400&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root, [data-theme="daylight"] {
+  --ground: #F7F4EF;
+  --surface-raised: #FBF9F6;
+  --surface: #ECE7DF;
+  --text: #2B2926;
+  --text-muted: #5C5852;
+  --accent: #4E5947;
+  --accent-fill: #5F6B58;
+  --on-accent: #F7F4EF;
+  --line: #D3CCC2;
+  --line-control: #857D71;
+  --focus: #4E5947;
+}
+
+[data-theme="dusk"] {
+  --ground: #1D1F1C;
+  --surface-raised: #272A26;
+  --surface: #343B32;
+  --text: #EDEAE3;
+  --text-muted: #C9C4BB;
+  --accent: #A6B0A0;
+  --accent-fill: #A6B0A0;
+  --on-accent: #1D1F1C;
+  --line: #3E453B;
+  --line-control: #7D8A76;
+  --focus: #A6B0A0;
+}
+
+[data-theme="mist"] {
+  --ground: #D8D8CF;
+  --surface-raised: #E0E0D9;
+  --surface: #CDCDC3;
+  --text: #3F413A;
+  --text-muted: #51544C;
+  --accent: #4E5947;
+  --accent-fill: #4E5947;
+  --on-accent: #E0E0D9;
+  --line: #BDBDB2;
+  --line-control: #72726A;
+  --focus: #3F413A;
+}
+
+:root {
+  --pillar-nest: #D2DBCA;
+  --pillar-on-nest: #2B2926;
+  --pillar-academy: #AFB8A7;
+  --pillar-on-academy: #2B2926;
+  --pillar-wayfinder: #8D9686;
+  --pillar-on-wayfinder: #2B2926;
+  --pillar-workshop: #4E5547;
+  --pillar-on-workshop: #EDEAE3;
+  --pillar-studio: #2F3628;
+  --pillar-on-studio: #EDEAE3;
+  --font-mark: "Cormorant Garamond", Georgia, serif;
+  --font-display: Newsreader, Georgia, serif;
+  --font-sans: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", Menlo, monospace;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-pill: 999px;
+}
+
+body { margin: 0; background: var(--ground); color: var(--text); font-family: var(--font-sans); font-size: 17px; line-height: 1.65; letter-spacing: .02em; -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
